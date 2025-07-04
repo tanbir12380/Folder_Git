@@ -1,0 +1,36 @@
+.bg {
+  background-color: bisque;
+  margin: 20px auto;
+  width: 40%;
+  border: 10px solid rgb(255, 82, 82);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.bg h4 {
+  font-size: 30px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.bg p {
+  text-align: justify;
+  text-decoration: underline;
+}
+
+#header {
+  height: 900px;
+  width: 100%;
+  margin: 0px auto;
+  background-image: url('professional-results.jpg');
+  background-repeat: no-repeat;
+  /* background-repeat: repeat-x;
+  background-repeat: repeat-y; */
+  /* background-size: cover;
+      background-size: contain; */
+  /* cover and contain both maintain aspect ration but cover value really cover the whole area even if he need to crop any portion of image */
+  background-position: bottom left;
+  /* it has other values like right,left,top,bottom and then right top, right bottom, top left,top right etc */
+  background-position: 100% 70%;
+  /* we can use % too, where first value mean distance from top elft in X axis  and second value means distance in Y axis */
+}
