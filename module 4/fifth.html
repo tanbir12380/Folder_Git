@@ -1,0 +1,81 @@
+<!--
+we learn here about flexbox , learned display:flex, justify-content , flex-wrap, gap etc
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container_1 {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+    }
+
+    .container_2 {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .container_2 div {
+      border: 2px solid orangered;
+      width: 200px;
+      height: 80px;
+
+    }
+
+    .sub1 {
+      border: 2px solid yellowgreen;
+      width: 150px;
+      height: 100px;
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container_1">
+    <div class="sub1">1</div>
+    <div class="sub1">2</div>
+    <div class="sub1">3</div>
+    <div class="sub1">4</div>
+    <div class="sub1">5</div>
+    <div class="sub1">6</div>
+    <div class="sub1">7</div>
+    <div class="sub1">8</div>
+  </div>
+
+  <div class="container_2">
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+    <div>d</div>
+    <div>e</div>
+    <div>f</div>
+    <div>g</div>
+    <div>h</div>
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+    <div>d</div>
+    <div>e</div>
+    <div>f</div>
+    <div>g</div>
+    <div>h</div>
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+    <div>d</div>
+    <div>e</div>
+    <div>f</div>
+  </div>
+</body>
+
+</html>
