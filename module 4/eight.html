@@ -1,0 +1,89 @@
+<!--
+we learn here making hero container  and cursor property and pointer value
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .hero {
+      width: 60%;
+      background-color: rgb(0, 123, 82);
+      padding: 5px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      height: 400px;
+      margin: 150px auto;
+    }
+
+    body {
+      background-color: bisque;
+    }
+
+    .hero_text {
+      width: 50%;
+      padding: 20px;
+    }
+
+    .hero_text p {
+      font-size: 20px;
+      text-align: justify;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .hero_text h2 {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .hero_text button {
+      background-color: chartreuse;
+      font-size: 20px;
+      border: 2px solid rgb(0, 54, 36);
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .hero_text button:hover {
+      background-color: rgb(191, 255, 0);
+    }
+
+    .hero_img {
+      width: 50%;
+      padding: 30px;
+
+    }
+
+    .hero_img img {
+      width: 100%;
+      object-fit: cover;
+      height: 350px;
+      border-radius: 15px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="hero">
+    <div class="hero_text">
+      <h2>This is title</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat in, vitae soluta minus magnam deserunt nam
+        laborum tenetur consequatur dicta voluptatibus maiores reiciendis qui nemo veniam, quia libero similique?
+        Aliquid, quisquam. Similique possimus consectetur totam, architecto autem aut fuga commodi, illum deserunt
+        delectus facilis qui minus tempora aperiam? Maiores, consectetur!</p>
+      <button>Submit</button>
+    </div>
+    <div class="hero_img">
+      <img src="saudi.jpg">
+    </div>
+  </div>
+</body>
+
+</html>
