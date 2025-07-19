@@ -1,0 +1,1 @@
+in the remaining class , we tried to make the portfolio project responsive for different devices

@@ -1,0 +1,94 @@
+<!--
+making complex image collage
+learned here about calc function,  selecting immediate child tag using > and flex-grow property which heps to give childs equal size
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .row {
+      height: 300px;
+      width: 90%;
+      margin: 50px auto;
+      display: flex;
+      gap: 30px;
+      margin: 30px auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      object-fit: cover;
+      box-sizing: border-box;
+      border: 1px solid brown;
+    }
+
+    .row2_sub {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .row2_sub img {
+      height: calc((100% - 10px)/2);
+      object-fit: cover;
+    }
+
+
+    .row3_sub {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, calc((100% - 10px)/2));
+      gap: 10px 10px;
+    }
+
+
+
+
+
+    /* this selector target the immediate child div's for row class */
+    .row>div {
+      flex: 1;
+      /* flex-grow: 1; */
+      /* both work same and give each child of row class same space on x axis */
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="row row1">
+      <img src="1.jpg" alt="">
+    </div>
+    <div class=" row row2">
+      <div>
+        <img src="2.jpg" alt="">
+      </div>
+      <div>
+        <img src="3.jpg" alt="">
+      </div>
+      <div class="row2_sub">
+        <img src="4.jpg" alt="">
+        <img src="5.jpg" alt="">
+      </div>
+    </div>
+    <div class="row row3">
+      <div><img src="6.jpg" alt=""></div>
+      <div class="row3_sub">
+        <img src="7.jpg" alt="">
+        <img src="8.jpg" alt="">
+        <img src="9.jpg" alt="">
+        <img src="10.jpg" alt="">
+      </div>
+      <div><img src="11.jpg" alt=""></div>
+    </div>
+  </section>
+</body>
+
+</html>

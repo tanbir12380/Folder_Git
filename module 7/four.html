@@ -1,0 +1,75 @@
+<!--
+we will learn here about basics of grid
+we learned display:grid,  grid-template-columns: ---- ; justify-content: start,end,center, space-between, space-evenly, space-around etc
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box_contain {
+      display: grid;
+
+      /*these two are same*/
+      /* grid-template-columns: 300px 200px 200px 240px; 
+      grid-template-columns: 300px repeat(2, 200px) 240px; */
+
+      /*these two are same*/
+      /* grid-template-columns: 1fr 1fr 1fr 2fr;
+      grid-template-columns: (3, 1fr) 2fr; */
+
+      /* grid-template-columns: 250px auto 200px; */
+      /*here the first and third column take 450px combindly and  auto column take the remaining space alone*/
+
+      grid-template-columns: 250px 500px 375px;
+
+      width: 95%;
+      padding: 20px;
+      border: 2px solid rgb(211, 0, 0);
+      margin: 100px auto;
+      gap: 20px;
+      justify-content: space-around;
+    }
+
+    .box {
+      width: 80%;
+      height: 70px;
+      border: 2px solid olivedrab;
+      padding: 10px;
+      background-color: aquamarine;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box_contain">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+
+</html>

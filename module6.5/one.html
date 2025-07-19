@@ -1,0 +1,112 @@
+<!--
+we will learn here about psedo selectors hover,focus,visited, nth-child(),first-child,last-child etc
+and learned about outline property of anchor tag
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2 {
+      background-color: coral;
+      text-align: center;
+    }
+
+    h2:hover {
+      color: darkgreen;
+    }
+
+    a:visited {
+      color: blueviolet;
+    }
+
+    a {
+      color: crimson;
+    }
+
+    input {
+      width: 50%;
+      display: block;
+      margin: 50px auto;
+      outline: none;
+      border: 2px solid rgb(154, 69, 0);
+      height: 50px;
+      font-size: 30px;
+      color: chartreuse;
+
+    }
+
+    input:focus {
+      border-radius: 25px;
+      width: 60%;
+      border-color: brown;
+      padding: 10px 20px;
+    }
+
+    /* li:first-child {
+      color: deeppink;
+    }
+
+    li:last-child {
+      color: greenyellow;
+    }
+
+    li:nth-child(4) {
+      background-color: darkkhaki;
+    } */
+
+
+    /*  applied to only even number  */
+    /* li:nth-child(2n) {
+      color: aqua;
+    } */
+
+    /*  applied to only odd number  */
+    /* li:nth-child(2n+1) {
+      color: aqua;
+    } */
+
+    /*  applied to only first item of each 3 items  */
+    /* li:nth-child(3n+1) {
+      color: aqua;
+    } */
+
+    /*  applied to only multiples of 3 like 3,6,9,12....   */
+    /* li:nth-child(3n) {
+      color: aqua;
+    } */
+  </style>
+</head>
+
+<body>
+  <h2>
+    Hello world!
+  </h2>
+  <input type="text">
+  <a href="https://www.youtube.com/clip/UgkxGv-9W1LGihlDDe3HYR8v-I5B6pVetDIL" target="_blank">Fav clip</a>
+  <a href="https://en.wikipedia.org/wiki/Madagascar" target="_blank">madagaskar</a>
+  <a href="https://www.britannica.com/place/Madagascar" target="_blank">madagaskar2</a>
+
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+  </ul>
+</body>
+
+</html>

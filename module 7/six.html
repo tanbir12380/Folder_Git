@@ -1,0 +1,219 @@
+<!--
+we learn here about responsive design by media query
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 90%;
+      margin: 50px auto;
+      padding: 10px;
+      border: 2px solid rgb(255, 102, 0);
+      gap: 15px 15px;
+      border-radius: 10px;
+    }
+
+    .food {
+      background-color: burlywood;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .food img {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .food h3 {
+      font-size: 25px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: rgb(39, 39, 39);
+      text-align: center;
+    }
+
+    .food p {
+      font-size: 20px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgb(55, 55, 55);
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 40px;
+      color: rgb(104, 10, 10);
+      text-align: center;
+    }
+
+
+    @media(max-width:576px) {
+      .container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Buy some foods from us to help hungry peoples</h2>
+  <div class="container">
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 1</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 2</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 3</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 4</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 5</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 6</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 7</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 8</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 9</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 10</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 11</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 12</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 13</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 14</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 15</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 16</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 17</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 18</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 19</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+    <div class="food">
+      <img src="food.png" alt="">
+      <h3>Food item - 20</h3>
+      <p>Price: $100</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae dolore, excepturi, debitis rem quas odio,
+        nisi iure enim impedit officiis nulla commodi! Qui porro tempore delectus cum ullam rerum illum!</p>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!--
+we learn here about z-index,
+z-index take numeric value, the bigger number a tag has , the toppest position it gets.
+
+learn also about pseduo elements
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .pnd {
+      position: relative;
+      z-index: 2;
+      width: 400px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      top: 250px;
+    }
+
+    .grs {
+      position: relative;
+      z-index: 0;
+      width: 1000px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 50px;
+    }
+
+    h3::after {
+      content: '.pdf';
+      color: rgb(70, 0, 0);
+      background-color: rgb(252, 143, 0);
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    h3::before {
+      content: 'Download : ';
+      color: rgb(70, 0, 0);
+      background-color: rgb(252, 143, 0);
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    p::first-letter {
+      font-size: 35px;
+      color: brown;
+    }
+
+    p::first-line {
+      color: rgba(187, 0, 53, 0.912);
+    }
+
+    ::selection {
+      color: chartreuse;
+      background-color: brown;
+    }
+
+    input::placeholder {
+      color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <img class="pnd" src="panda11.png" alt="">
+  <img class="grs" src="grass.jpg" alt="">
+
+
+  <div>
+    <h3>Hello world!</h3>
+    <h3>Hello world!</h3>
+    <h3>Hello world!</h3>
+    <h3>Hello world!</h3>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis temporibus inventore cum sint quam
+      harum sit repellat accusantium tempore tenetur ea quo minus porro nulla ut consequatur incidunt et, quos sed
+      cupiditate libero in! Ea, labore voluptatibus odit, expedita aspernatur pariatur ex adipisci dolorem
+      reprehenderit, architecto rem tempora voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis temporibus inventore cum sint quam
+      harum sit repellat accusantium tempore tenetur ea quo minus porro nulla ut consequatur incidunt et, quos sed
+      cupiditate libero in! Ea, labore voluptatibus odit, expedita aspernatur pariatur ex adipisci dolorem
+      reprehenderit, architecto rem tempora voluptatum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis temporibus inventore cum sint quam
+      harum sit repellat accusantium tempore tenetur ea quo minus porro nulla ut consequatur incidunt et, quos sed
+      cupiditate libero in! Ea, labore voluptatibus odit, expedita aspernatur pariatur ex adipisci dolorem
+      reprehenderit, architecto rem tempora voluptatum.</p>
+  </div>
+
+  <form action="">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+  </form>
+</body>
+
+</html>

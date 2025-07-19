@@ -1,0 +1,122 @@
+<!--
+we will design a simple website layout containing header, nav, main, siderbar, adverise, and footer and this layout will be responsive
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .head,
+    .main,
+    .nav,
+    .sidebar,
+    .advertise,
+    .foot {
+      background-color: rgb(255, 206, 147);
+      border-radius: 10px;
+      border: 2px solid yellow;
+      padding: 10px;
+      margin: 10px 10px 20px 10px;
+    }
+
+    .head {
+      grid-area: head;
+    }
+
+    .main {
+      grid-area: main;
+    }
+
+    .nav {
+      grid-area: nav;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+    }
+
+    .advertise {
+      grid-area: advertise;
+    }
+
+    .foot {
+      grid-area: foot;
+    }
+
+    .contain {
+      display: grid;
+      grid-template-areas:
+        "head head head head"
+        "nav main main sidebar"
+        "nav main main advertise"
+        "foot foot foot foot"
+      ;
+    }
+
+    @media screen and (min-width:576px) and (max-width:992px) {
+      .contain {
+        grid-template-areas:
+          "head head head"
+          "nav nav nav"
+          "sidebar main main"
+          "advertise foot foot";
+      }
+
+    }
+
+    @media screen and (max-width:576px) {
+      .contain {
+        grid-template-areas:
+          "head" "nav" "main" "sidebar" "advertise" "foot";
+      }
+
+    }
+  </style>
+</head>
+
+<body class="contain">
+  <header class="head">
+    <h2>This is a header</h2>
+  </header>
+  <nav class="nav">
+    <ul>
+      <li>link1</li>
+      <li>link2</li>
+      <li>link3</li>
+      <li>link4</li>
+    </ul>
+
+  </nav>
+
+
+  <main class="main">
+    <h3>This is the main section</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident optio, cupiditate illo fuga distinctio
+      similique nobis quaerat laborum quam commodi, consequuntur incidunt fugit, rerum quos quia voluptatem ducimus
+      pariatur itaque. Fuga eaque molestias odit, nesciunt qui pariatur debitis natus nihil numquam rem commodi.
+      Numquam tempore ratione quidem cumque accusamus nobis mollitia ducimus! Doloremque reprehenderit libero labore
+      similique, expedita error ab deserunt excepturi tempora, nulla numquam voluptate sunt cupiditate deleniti
+      iure, hic itaque alias eum maiores nemo sed facere provident quod! Atque soluta molestiae deleniti. Magni,
+      iure. Culpa labore cumque perspiciatis. Mollitia placeat veritatis vero? Odit adipisci officiis molestiae
+      veritatis necessitatibus!</p>
+  </main>
+
+  <div class="sidebar">
+    <h4>This is sidebar</h4>
+  </div>
+  <div class="advertise">
+    <h4>This is advertise</h4>
+  </div>
+
+  <footer class="foot">
+    <h4>This is the footer</h4>
+  </footer>
+
+</body>
+
+</html>

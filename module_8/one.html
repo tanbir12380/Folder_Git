@@ -1,0 +1,94 @@
+<!--
+we are learning here about more responsive design 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box_contain {
+      display: flex;
+      border: 2px solid brown;
+      padding: 15px;
+      border-radius: 10px;
+      gap: 20px;
+    }
+
+    .box {
+      background-color: blueviolet;
+      padding: 15px;
+      width: 50%;
+      border-radius: 10px;
+    }
+
+    .container {
+      display: flex;
+      margin-top: 50px;
+      flex-wrap: wrap;
+      gap: 50px 30px;
+      justify-content: center;
+    }
+
+    .item {
+      width: 100px;
+      height: 75px;
+      background-color: rgb(179, 255, 0);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid rgb(147, 0, 0);
+
+    }
+
+    @media screen and (max-width:576px) {
+      .box_contain {
+        flex-direction: column;
+      }
+
+      .box {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box_contain">
+    <div class="box">
+      <h3>First box</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat molestias, quis voluptatum provident, non
+        ullam ratione ipsum libero reiciendis culpa recusandae fugiat eaque consectetur ipsam aliquam doloribus? Nemo,
+        sit voluptate aut voluptas obcaecati qui eos reiciendis excepturi dolores, earum ullam. Quisquam error nulla a
+        perspiciatis iure reprehenderit dignissimos voluptate!</p>
+    </div>
+    <div class="box">
+      <h3>Second box</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quaerat molestias, quis voluptatum provident, non
+        ullam ratione ipsum libero reiciendis culpa recusandae fugiat eaque consectetur ipsam aliquam doloribus? Nemo,
+        sit voluptate aut voluptas obcaecati qui eos reiciendis excepturi dolores, earum ullam. Quisquam error nulla a
+        perspiciatis iure reprehenderit dignissimos voluptate!</p>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="item">item - 1</div>
+    <div class="item">item - 2</div>
+    <div class="item">item - 3</div>
+    <div class="item">item - 4</div>
+    <div class="item">item - 5</div>
+    <div class="item">item - 6</div>
+    <div class="item">item - 7</div>
+    <div class="item">item - 8</div>
+    <div class="item">item - 9</div>
+    <div class="item">item - 10</div>
+  </div>
+</body>
+
+</html>
