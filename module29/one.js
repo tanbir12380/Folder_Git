@@ -1,0 +1,1 @@
+/* details about ES6 , var, let and const */
