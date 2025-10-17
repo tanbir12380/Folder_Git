@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegate</title>
+</head>
+
+<body>
+  <h1>Explore the concept of Event Delegate</h1>
+  <ol id="item-list">
+    <li class="item">My Awesome Item - 1</li>
+    <li class="item">My Awesome Item - 2</li>
+    <li class="item">My Awesome Item - 3</li>
+    <li class="item">My Awesome Item - 4</li>
+    <li class="item">My Awesome Item - 5</li>
+    <li class="item">My Awesome Item - 6</li>
+  </ol>
+  <button id="btn-add-item">Add new item</button>
+
+
+
+  <ol id="item-list2">
+    <li class="item2">My Awesome Item - 1</li>
+    <li class="item2">My Awesome Item - 2</li>
+    <li class="item2">My Awesome Item - 3</li>
+    <li class="item2">My Awesome Item - 4</li>
+    <li class="item2">My Awesome Item - 5</li>
+    <li class="item2">My Awesome Item - 6</li>
+  </ol>
+  <button id="btn-add-item2">Add new item</button>
+  <script>
+
+    const items = document.getElementsByClassName('item');
+    for (const item of items) {
+      item.addEventListener('click', function (event) {
+        event.target.parentNode.removeChild(event.target);
+      })
+    };         // work for first ol
+
+    document.getElementById('btn-add-item')
+      .addEventListener('click', function () {
+        const ol = document.getElementById('item-list');
+        const li = document.createElement('li');
+        li.innerText = 'Brand new item added';
+        li.classList.add('item');
+        ol.appendChild(li);
+      });      // add a new item
+
+
+
+
+    document.getElementById('item-list2')
+      .addEventListener('click', function (event) {
+        event.target.parentNode.removeChild(event.target);
+      });    // work for second ol
+
+    document.getElementById('btn-add-item2')
+      .addEventListener('click', function () {
+        const ol = document.getElementById('item-list2');
+        const li = document.createElement('li');
+        li.innerText = 'Brand new item added';
+        li.classList.add('item2');
+        ol.appendChild(li);
+      });      // add a new item2
+
+
+
+
+  </script>
+</body>
+
+</html>

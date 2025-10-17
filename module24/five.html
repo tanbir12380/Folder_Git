@@ -1,0 +1,68 @@
+<!--
+we learned here about how to change or apply css properties through js,   classList , add remove or replace class , and get , set attribute
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript</title>
+  <style>
+    .bold {
+      font-weight: 800;
+      font-size: 50px;
+    }
+
+    .red {
+      color: red !important;
+      background-color: rgb(217, 167, 0) !important;
+    }
+
+    .green {
+      color: rgb(48, 79, 0) !important;
+      background-color: rgb(165, 199, 123) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p title="this is highlight text" id="highlight">This paragraph will be selected by a complex querySelector.</p>
+    <p>Another paragraph inside container.</p>
+
+    <ul>
+      <li class="item">Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li class="item">Item 4</li>
+      <li class="item">Item 5</li>
+    </ul>
+  </div>
+
+  <script>
+
+    let highElement = document.getElementById('highlight');
+    highElement.style.color = 'green';
+    highElement.style.backgroundColor = 'orange';
+    highElement.style.border = '20px';
+    highElement.style.borderRadius = '15px';
+    highElement.style.textAlign = 'center';
+    highElement.style.padding = '15px 10px';
+    highElement.classList.add('bold');
+    highElement.classList.add('red');
+    let class1 = highElement.classList;
+    console.log(class1);//check in console
+    highElement.classList.remove('red');
+    let tile = highElement.getAttribute('title');
+    console.log(tile);//see in console
+    highElement.setAttribute('class', 'green');  // .green class is applied, be careful this one remove existing classes
+
+
+
+  </script>
+</body>
+
+</html>

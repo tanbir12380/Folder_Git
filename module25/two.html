@@ -1,0 +1,95 @@
+<!--
+we learned here about onclick event in button
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #312ac0, #0f80d1);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.8s ease;
+      margin: 20px;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      background: linear-gradient(135deg, #3425e0, #e405e4);
+      transform: scale(1.1);
+    }
+
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section
+    style="display: flex; justify-content: center; align-items: center; height:98vh ; border:2px solid red; border-radius:5px">
+    <button class="button" onclick="makeYellow()">Make Yellow</button>
+    <button class="button" onclick="makeRed()">Make Red</button>
+    <button class="button" id="brown-btn">Make Brown</button>
+    <button class="button" onclick="makeOrange()">Make Orange</button>
+    <button class="button" onclick="makeGreen()">Make Green</button>
+    <button class="button" id="maroon-btn">Make Maroon</button>
+
+  </section>
+
+
+
+
+  <script>
+    function makeYellow() {
+      document.body.style.backgroundColor = 'yellow';
+    }
+    function makeRed() {
+      document.body.style.backgroundColor = 'red';
+    }
+    function makeOrange() {
+      document.body.style.backgroundColor = '#c08600';
+    }
+    function makeGreen() {
+      document.body.style.backgroundColor = 'green';
+    }
+
+
+    //option 2 
+    function makeMaroon() {
+      document.body.style.backgroundColor = '#800000';
+    }
+    let maroonbtn = document.getElementById('maroon-btn');
+    maroonbtn.onclick = makeMaroon;  // ignore () , because adding parenthesis execute the function immediately after the page loads
+
+    //option 3  
+
+    let brownbtn = document.getElementById('brown-btn');
+    brownbtn.onclick = function makeBrown() {
+      document.body.style.backgroundColor = '#A52A2A';
+    }
+
+
+  </script>
+</body>

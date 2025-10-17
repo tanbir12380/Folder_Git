@@ -1,0 +1,157 @@
+<!--
+we learned here about changing text content in an event  and learn about how to get input from imput or textarea tag with .value
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #312ac0, #0f80d1);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.8s ease;
+      margin: 20px auto;
+      display: block;
+      width: 150px;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      background: linear-gradient(135deg, #3425e0, #e405e4);
+      transform: scale(1.1);
+    }
+
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:disabled {
+      background: #9ca3af;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    #userfind {
+      font-size: 40px;
+      font-weight: 600;
+      color: #001c83;
+      font-family: sans-serif;
+    }
+
+    #nameshow,
+    #inp,
+    #btn4,
+    #btn5 {
+      display: block;
+      margin: 15px auto;
+      text-align: center;
+    }
+
+    /* Paragraph showing name */
+    #nameshow {
+      font-size: 38px;
+      font-weight: 500;
+      color: #001c83;
+      margin-top: 100px;
+      font-family: sans-serif;
+    }
+
+    /* Input box */
+    #inp {
+      padding: 10px 15px;
+      width: 250px;
+      border: 2px solid #312ac0;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      text-align: center;
+      outline: none;
+    }
+
+    #inp:focus {
+      outline: none;
+      border-color: #e40540;
+      /* box-shadow: 0 0 8px rgba(227, 5, 228, 0.4); */
+    }
+
+    /* Insert & Clear buttons (matching main button style) */
+    #btn4,
+    #btn5 {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #312ac0, #0f80d1);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      width: 120px;
+    }
+
+    #btn4:hover,
+    #btn5:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #3425e0, #e405e4);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    #btn4:active,
+    #btn5:active {
+      transform: scale(1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+
+</head>
+
+<body>
+  <h2 id="userfind" style="text-align:center">No user found</h2>
+  <button class="button" id="btn">Log in</button>
+  <button class="button" id="btn2">Log out</button>
+
+
+  <p id="nameshow">No name found</p>
+  <input type="text" name="" id="inp" placeholder="Enter name here">
+  <button id="btn4">Insert</button>
+  <button id="btn5">Clear</button>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', function () {
+      document.getElementById('userfind').innerText = 'User logged in successfully';
+    });
+
+    document.getElementById('btn2').addEventListener('click', function () {
+      document.getElementById('userfind').innerText = 'No user found';
+    });
+
+
+
+
+    document.getElementById('btn4').addEventListener('click', function () {
+      let input = document.getElementById('inp').value;
+      document.getElementById('nameshow').innerText = input;
+      document.getElementById('inp').value = '';
+    });
+    document.getElementById('btn5').addEventListener('click', function () {
+      document.getElementById('nameshow').innerText = 'No name found';
+    })
+  </script>
+</body>
+
+</html>

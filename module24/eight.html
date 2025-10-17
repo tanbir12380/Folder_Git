@@ -1,0 +1,88 @@
+<!--
+we learn here to add element and subelements in docuement through js
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .section-card {
+      background-color: rgb(62, 35, 0) !important;
+      color: chartreuse !important;
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main id="main-contain">
+    <section id="fg">
+      <ul id="listing">
+        <li>abcd</li>
+        <li>messi</li>
+        <li>neymar</li>
+        <li>ronaldo</li>
+        <li>yamal</li>
+        <li>cow</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+
+    let mainCont = document.getElementById('main-contain');
+
+
+    let sec = document.createElement('section');
+    let subElem = document.createElement('h2');
+    subElem.innerText = 'hello world , this time i am not stopping , okey?';
+    sec.appendChild(subElem);
+
+
+
+
+    let unorder = document.createElement('ul');
+    let li1 = document.createElement('li');
+    let li2 = document.createElement('li');
+    let li3 = document.createElement('li');
+    li1.innerText = 'red';
+    li2.innerText = 'blue';
+    li3.innerText = 'green';
+    unorder.appendChild(li1);
+    unorder.appendChild(li2);
+    unorder.appendChild(li3);
+    sec.appendChild(unorder);
+
+
+    mainCont.appendChild(sec);
+
+
+
+
+
+    // easier method
+
+    let sec2 = document.createElement('section');
+    sec2.innerHTML = `
+    <p>Technology i need to leard </p>
+    <ul>
+      <li>JS</li>
+      <li>Python</li>
+      <li>Node</li>
+      <li>C++</li>
+      </ul>
+    `;
+
+    mainCont.appendChild(sec2);
+
+  </script>
+</body>
+
+</html>

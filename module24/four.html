@@ -1,0 +1,73 @@
+<!--
+we learn here about qeurySelector and querySelectorAll of js
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced querySelector Example</title>
+  <style>
+    .container {
+      border: 2px solid black;
+      padding: 20px;
+      width: 300px;
+    }
+
+    .container p {
+      color: blue;
+      font-size: 16px;
+    }
+
+    .container p.highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    .container ul li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+
+    .container ul li:nth-child(even) {
+      background-color: #d0d0d0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p class="highlight">This paragraph will be selected by a complex querySelector.</p>
+    <p>Another paragraph inside container.</p>
+
+    <ul>
+      <li class="item">Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li class="item">Item 4</li>
+      <li class="item">Item 5</li>
+    </ul>
+  </div>
+
+  <button id="change-btn">Change Items</button>
+
+  <script>
+
+    const firstItem = document.querySelector('.container .item');
+    console.log(firstItem.innerText);
+
+
+    const evenItems = document.querySelectorAll('.container .item');
+    for (let item of evenItems) {
+      console.log(item.innerText);
+    }
+
+
+    console.log(document.querySelector('irfeirrue')); // gives null
+    console.log(document.querySelectorAll('irfeidcdre')); // gives empty Array
+
+  </script>
+</body>
+
+</html>

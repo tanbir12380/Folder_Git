@@ -21,16 +21,15 @@
 #header {
   height: 900px;
   width: 100%;
-  margin: 0px auto;
-  background-image: url('professional-results.jpg');
-  background-repeat: no-repeat;
+  background-image: url("professional-results.jpg");
+  background-repeat: repeat;
   /* background-repeat: repeat-x;
   background-repeat: repeat-y; */
   /* background-size: cover;
       background-size: contain; */
   /* cover and contain both maintain aspect ration but cover value really cover the whole area even if he need to crop any portion of image */
-  background-position: bottom left;
+  background-position: center;
   /* it has other values like right,left,top,bottom and then right top, right bottom, top left,top right etc */
-  background-position: 100% 70%;
+  /* background-position: 100% 70%; */
   /* we can use % too, where first value mean distance from top elft in X axis  and second value means distance in Y axis */
 }

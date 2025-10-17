@@ -1,0 +1,65 @@
+<!--
+we learned here to use getElementById() and getElementsByClassName() of js
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li id="3rd">three</li>
+    <li>four</li>
+    <li class="nice">five</li>
+    <li class="nice">six</li>
+    <li class="nice">seven</li>
+    <li class="nice">eight</li>
+    <li>nine</li>
+    <li>Ten</li>
+  </ul>
+
+
+
+  <script>
+
+    let idElem = document.getElementById('3rd');
+    console.log(idElem);
+    console.log(idElem.innerText);
+
+    idElem.innerText = 'not three';
+    console.log(idElem.innerText);
+
+
+
+    let classElems = document.getElementsByClassName('nice');
+    console.log(classElems);
+    for (let elem of classElems) {
+      console.log(elem);
+      console.log(elem.innerText);
+    }
+
+    for (let elem of classElems) {
+      let text = elem.innerText;
+      text = text + 'nice';
+      elem.innerText = text;
+      console.log(elem);
+      console.log(elem.innerText);
+    }
+
+
+    console.log(document.getElementById('irfeirrue')); // gives null
+    console.log(document.getElementsByClassName('irfeidcdrue')); // gives empty Array
+
+
+  </script>
+</body>
+
+</html>

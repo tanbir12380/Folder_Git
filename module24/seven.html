@@ -1,0 +1,62 @@
+<!--
+we learn about childNodes and parentNode   and creating a html element from js
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .section-card {
+      background-color: rgb(62, 35, 0) !important;
+      color: chartreuse !important;
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="fg">
+    <ul id="listing">
+      <li>
+        <p>fgc</p>
+        <p id="blo">abc</p>
+      </li>
+      <li>messi</li>
+      <li>neymar</li>
+      <li>ronaldo</li>
+      <li>yamal</li>
+      <li>cow</li>
+    </ul>
+
+
+
+    <script>
+      let parElem = document.getElementById('fg');
+      console.log(parElem.childNodes);
+      console.log(parElem.childNodes[1]);
+      console.log(parElem.childNodes[1].childNodes[1]);
+      console.log(parElem.childNodes[1].childNodes[1].childNodes[1]);
+
+      let chiElem = document.getElementById('blo');
+      console.log(chiElem);
+      console.log(chiElem.parentNode);
+      console.log(chiElem.parentNode.parentNode);
+      console.log(chiElem.parentNode.parentNode.parentNode);
+      console.log(chiElem.parentNode.parentNode.parentNode.parentNode);
+      console.log(chiElem.parentNode.parentNode.parentNode.parentNode.parentNode);
+
+
+      let newElem = document.createElement('li');
+      newElem.innerText = 'i want problems';
+      let parent1 = document.getElementById('listing');
+      parent1.appendChild(newElem);
+
+    </script>
+</body>
+
+</html>

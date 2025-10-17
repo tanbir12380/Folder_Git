@@ -27,22 +27,26 @@ we learned display:grid,  grid-template-columns: ---- ; justify-content: start,e
       /*here the first and third column take 450px combindly and  auto column take the remaining space alone*/
 
       grid-template-columns: 250px 500px 375px;
-
+      grid-template-rows: repeat(7, 250px);
       width: 95%;
+      height: 2000px;
       padding: 20px;
       border: 2px solid rgb(211, 0, 0);
       margin: 100px auto;
       gap: 20px;
-      justify-content: space-around;
+      justify-content: space-evenly;
+      align-content: space-between;
+      align-items: center;
+      justify-items: start;
     }
 
     .box {
-      width: 80%;
-      height: 70px;
+      width: 50%;
+      height: 150px;
       border: 2px solid olivedrab;
       padding: 10px;
       background-color: aquamarine;
-      margin: 10px auto;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -73,3 +77,44 @@ we learned display:grid,  grid-template-columns: ---- ; justify-content: start,e
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+<!-- let me clear about justify-content,justify-items,align-content and align-items those 2 with content work with all
+items together.
+example
+the justify-content:center bring all the items to the center horizontally keeping their width unchanged
+justify-content: bring all the items to the start horizontally keeping their width unchanged
+justify-content:space-evenly divide the empty space between the gap space-evenly
+now, important thing is, the container must have fixed width and more space then required for child horizontally to see
+justify-content property's impact
+
+lets talk about align-content, well it is same of justify-content , just work vertically, the container need more height
+then required for childs and childs also should have fixed height
+example,
+
+align-content: center, bring all the items in center of container vertically keeping their height unchanged
+align-content: space-between, divide the empty vertical spaces within items but the first and last items wont have any
+gap with border of parent
+
+
+
+
+now, justify-items and align-items, well, they work for each items individually, in grid , when you have fixed height
+and fixed width for each cell through grid-template-columns and grid-template-rows, and your child elements also have
+fixed width and height , you can change their position through this two property
+the justify-items will change the items horizontally within the cell, can bring in start, center and end
+same for align-items, can bring the item within the cell in start,center and end vertically
+
+
+in flexbox, align-content only works when you have multiple rows through flex:wrap
+and justify-items wont work in flexbox
+
+-->

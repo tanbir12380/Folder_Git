@@ -44,3 +44,16 @@ var six = 12 - 'helloWorld' // NaN
 console.log(six);
 
 console.log(isNaN(six)); // tell if the variable is NaN or not NaN, here the six is NaN, then we will get true
+
+
+
+//practice later
+
+var car= 90.8;
+var car1 = parseInt(car);
+console.log(car1);
+var car2 = '90.34';
+var car3= parseInt(car2);
+console.log(car3);
+var car4 = parseFloat(car2);
+console.log(car4);

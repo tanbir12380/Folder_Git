@@ -1,0 +1,59 @@
+<!--
+we learned here to use getElementsByTagName() of js
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>This is first h2 header</h2>
+  <h2>This is second h2 header</h2>
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>
+    <li>five</li>
+  </ul>
+
+
+
+  <!--
+  javascript codes go here
+  -->
+  <script>
+    //try to access this from dev tool console, very easy
+    let student = {
+      name: 'abdul',
+      age: 34,
+      study: function () {
+        console.log('abdul is reading');
+      }
+    }
+
+
+    let elements = document.getElementsByTagName('li');
+    for (let elem of elements) {
+      console.log(elem);
+      console.log(elem.innerText);
+    }
+
+
+    let elements1 = document.getElementsByTagName('h2');
+    for (let elem of elements1
+
+
+    ) {
+      console.log(elem);
+      console.log(elem.innerText);
+    }
+  </script>
+</body>
+
+</html>

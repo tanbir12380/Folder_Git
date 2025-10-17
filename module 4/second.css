@@ -14,7 +14,7 @@ header nav ul li:hover {
 header nav ul li a {
   text-decoration: none;
   font-size: 25px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header nav ul {
@@ -36,17 +36,22 @@ body {
   padding: 0;
 }
 
-
-
 article {
   width: 65%;
   margin: 0 auto;
+}
+
+figure {
+  width: 100%;
+  margin: 0px;
 }
 
 img {
   width: 500px;
   height: 700px;
   object-fit: cover;
+  margin: 0px auto;
+  display: block;
 }
 
 article {

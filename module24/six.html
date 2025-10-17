@@ -1,0 +1,83 @@
+<!--
+we learn here about innerText and innerHTML
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .section-card {
+      background-color: rgb(62, 35, 0) !important;
+      color: chartreuse !important;
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>this is sixth code of module24</p>
+  <ul id="listing">
+    <li>abc</li>
+    <li>messi</li>
+    <li>neymar</li>
+    <li>ronaldo</li>
+    <li>yamal</li>
+    <li>
+      <!--cow-->
+    </li>
+  </ul>
+
+  <section id="a1">
+    <h2>hello world</h2>
+  </section class="c2">
+  <section>
+    <h2>hello world</h2>
+  </section>
+  <section id="a3">
+    <h2>hello world</h2>
+  </section>
+  <section id="r5" class="kh43">
+    <h2>hello world</h2>
+  </section>
+
+
+  <script>
+    let text = document.getElementById('listing');
+    console.log(text.innerText);
+    console.log(text.innerHTML);
+    text.innerText = 'only me';
+    console.log(text.innerText);
+    text.innerHTML = '<li>cow</li> <li>goat</li> <li>buffalo</li>';
+    console.log(text.innerHTML);
+
+
+    // we want to access all section from html
+
+    let sections = document.getElementsByTagName('section');
+    console.log(sections);
+    for (let section of sections) {
+      console.log(section);
+      section.style.backgroundColor = 'green';
+      section.style.padding = '30px';
+      section.style.border = '2px solid red';
+      section.style.borderRadius = '15px';
+      section.style.margin = '10px';
+      section.style.textAlign = 'center';
+    }
+
+
+    let sections1 = document.querySelectorAll('section');
+    console.log(sections1);
+    for (let section of sections1) {
+      console.log(section);
+      section.classList.add('section-card');
+    }
+  </script>
+</body>
+
+</html>

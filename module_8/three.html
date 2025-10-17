@@ -65,7 +65,7 @@ we will make this image collage responisve for multiple devices and create a com
       height: 50vh;
       margin: 50px auto;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 1fr) 0.2fr 0.2fr;
+      grid-template-rows: repeat(5, 1fr) 0.2fr 0.2fr;
       gap: 10px 10px
     }
 
@@ -80,12 +80,34 @@ we will make this image collage responisve for multiple devices and create a com
 
     #box-1 {
       grid-row: span 5;
+
+      grid-row-start: 1;
+      grid-row-end: 6;
+
+      grid-row: 1/6;
+
+      grid-area: 1/1/6/2;
+      /* row-start / column-start / row-end / column-end; */
+
+      /*  all of these work same */
     }
 
     #box-11,
     #box-12 {
       grid-column: span 3;
+
+      grid-column-start: 2;
+      grid-column-end: 5;
+
+      grid-column: 2/5;
+
+      /*  since there are 2 cell , we can't use grid area here */
+
+
+      /*  all of these work same */
     }
+
+
 
     @media screen and (max-width:576px) {
       .row {

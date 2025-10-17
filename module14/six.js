@@ -1,6 +1,6 @@
 /*  we learn about multilevel condition  */
 
-var price = 3500;
+var price = 3552;
 var discount ;
 var payAmount;
 
@@ -23,6 +23,13 @@ else if( price>=4000){
   payAmount = price - discount;
   console.log("congratulations, you get ", discount, "tk discount");
   console.log("payable amount :", payAmount , "taka");
+}
+
+else if(price>=3000){
+  discount=price*8/100;
+  payAmount = price - discount;
+  console.log("Congratulations, you get ", discount, "tk discount");
+    console.log("payable amount :", payAmount , "taka");
 }
 
 else if( price>=2000){
