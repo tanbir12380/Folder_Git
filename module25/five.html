@@ -187,7 +187,6 @@ we will add comment in comment section with js
 
   <script>
     document.getElementById('submit').addEventListener('click', function () {
-      let inp = document.getElementById('wrt-comment').value;
       let container = document.createElement('div');
       let commentor = document.createElement('h4');
       let comment = document.createElement('p');
@@ -198,6 +197,10 @@ we will add comment in comment section with js
 
       let commentorVal = document.getElementById('commentor1').value;
       let commentVal = document.getElementById('wrt-comment').value;
+
+      if (commentVal === "" || commentorVal === "") {
+        return;
+      }
 
       commentor.innerText = commentorVal;
       comment.innerText = commentVal;
@@ -213,6 +216,31 @@ we will add comment in comment section with js
       document.getElementById('wrt-comment').value = '';
 
     });
+
+
+    //another way with innerHTML
+    document.getElementById('submit1').addEventListener('click', function () {
+      let commentorVal = document.getElementById('commentor1').value;
+      let commentVal = document.getElementById('wrt-comment').value;
+
+      // Exit if either input is empty
+      if (commentVal === "" || commentorVal === "") return;
+
+      // Create a new comment container with innerHTML
+      const container = document.createElement('div');
+      container.innerHTML = `
+    <h4 class="commentor">${commentorVal}</h4>
+    <p class="comment">${commentVal}</p>
+  `;
+
+      // Append the new comment to the comments section
+      document.getElementById('comments').appendChild(container);
+
+      // Clear the input fields
+      document.getElementById('commentor1').value = '';
+      document.getElementById('wrt-comment').value = '';
+    });
+
   </script>
 </body>
 

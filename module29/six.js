@@ -3,14 +3,17 @@ const numbers = [87, 118, 5, 91];
 console.log(numbers);
 console.log(...numbers);
 
-const max = Math.max(numbers); // the max function wich numbers separated by comma not direct array
+const max = Math.max(numbers); // the max function wants numbers separated by comma not direct array
 console.log(max);
 const max1 = Math.max(...numbers); //  ... returns numbers of array
 console.log(max1);
 
 const original = [1, 2, 3];
+const original1 = [4, ...original, 8, 7];
 const copy = [...original]; // ... returns the values only  editing on copy wont affect original array
 const copy1 = [4, 7, ...original, 9, 7, 2];
+const copy2 = [...original, 5, 8, 7, 3, ...original1, 9, 0, 5];
+console.log(copy2);
 copy.push(8);
 console.log(original);
 console.log(copy);

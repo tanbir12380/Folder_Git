@@ -35,8 +35,7 @@ we learned here about changing text content in an event  and learn about how to 
     }
 
     .button:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #350506, #b30000);
     }
 
     .button:disabled {
@@ -134,10 +133,12 @@ we learned here about changing text content in an event  and learn about how to 
   <script>
     document.getElementById('btn').addEventListener('click', function () {
       document.getElementById('userfind').innerText = 'User logged in successfully';
+      document.getElementById('btn').setAttribute("disabled", "true");
     });
 
     document.getElementById('btn2').addEventListener('click', function () {
       document.getElementById('userfind').innerText = 'No user found';
+      document.getElementById('btn').removeAttribute("disabled");
     });
 
 
