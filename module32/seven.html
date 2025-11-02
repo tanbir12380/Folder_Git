@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List</title>
+
+  <!-- Font Awesome (fixed version) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-A1s+VTHlG0AgmCqQyfs0JzDsLjstzjkaeH1fF+UJz6xHyxE7dNf36g5/X2SzXw7pRfi7Qrc9blBk6U+iaG7Tsg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f8f9fa;
+    }
+
+    .title {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 30px;
+    }
+
+    #todo-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .todo-card {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      padding: 12px 16px;
+      margin-bottom: 15px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .todo-card p {
+      margin: 0;
+      font-size: 20px;
+      color: #007bff;
+      width: 24px;
+    }
+
+    .todo-card h4 {
+      margin: 0;
+      font-weight: 500;
+      flex-grow: 1;
+    }
+
+    .todo-card.completed {
+      background: #e8f5e9;
+      border-color: #81c784;
+    }
+
+    .todo-card.completed h4 {
+      text-decoration: line-through;
+      color: #388e3c;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title">All Todos</h1>
+  <section id="todo-container"></section>
+
+  <script>
+    const loadTodo = () => {
+      fetch("https://jsonplaceholder.typicode.com/todos")
+        .then(res => res.json())
+        .then(data => displayTodo(data));
+    };
+
+    const displayTodo = (todos) => {
+      const todoContainer = document.getElementById("todo-container");
+      todoContainer.innerHTML = "";
+
+      todos.forEach(todo => {
+        const todoCard = document.createElement("div");
+        todoCard.classList.add("todo-card");
+        if (todo.completed) todoCard.classList.add("completed");
+
+        todoCard.innerHTML = `
+          <p>
+            ${todo.completed
+            ? `<i class="fa-solid fa-square-check"></i>`
+            : `<i class="fa-regular fa-square-check"></i>`}
+          </p>
+          <h4>${todo.title}</h4>
+        `;
+
+        todoContainer.appendChild(todoCard);
+      });
+    };
+
+    loadTodo();
+  </script>
+</body>
+
+</html>
+
+
+<!--
+within backtic `` , you can use only this things of js
+1/Variables
+2/Math / logic operations
+3/Function calls
+4/Ternary operators (? :)
+5/Array methods (map, filter, etc.)
+
+Variable->
+const name = "Tanbir"; // declare variable
+const html1 = `<p>Hello, ${name}!</p>`; // use inside backticks
+
+Math / logic operations->
+const a = 5;
+const b = 12; 
+const html2 = `<p>Sum: ${a + b}, Is a > b? ${a > b}</p>`; // use math & logic inside backticks
+
+
+function calls->
+function greet(user) {
+  return `Hi, ${user}!`; // function returns a template literal
+}
+const html3 = `<p>${greet("Tanbir")}</p>`; // call function inside backticks
+
+
+Ternary ->
+const completed = true; // declare variable
+const html4 = `<p>Status: ${completed ? "Done ✅" : "Pending ❌"}</p>`; // use ternary inside backticks
+
+
+
+ArrayMethods->
+const fruits = ["Apple", "Banana", "Mango"]; // declare array
+
+const html5 = ` <ul>  ${fruits.map(fruit => `<li>${fruit}</li>`).join('')} </ul> `;
+console.log(html5);
+
+
+
+-->

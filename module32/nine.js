@@ -1,0 +1,10 @@
+console.log("lets begin");
+const abc = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+const res = await abc.json();
+console.log(res);
+const a = 10;
+const b = 5;
+const sum = a + b;
+const square = sum * sum;
+console.log(square);
+console.log(sum);
